@@ -1,6 +1,6 @@
 import codecademylib3_seaborn
 import matplotlib.pyplot as plt
-
+#gardient descent intercept
 def get_gradient_at_b(x, y, b, m):
   N = len(x)
   diff = 0
@@ -10,7 +10,7 @@ def get_gradient_at_b(x, y, b, m):
     diff += (y_val - ((m * x_val) + b))
   b_gradient = -(2/N) * diff  
   return b_gradient
-
+#Gradient Descent Slope
 def get_gradient_at_m(x, y, b, m):
   N = len(x)
   diff = 0
@@ -43,7 +43,7 @@ revenue = [52, 74, 79, 95, 115, 110, 129, 126, 147, 146, 156, 184]
 #Uncomment the line below to run your gradient_descent function
 b, m = gradient_descent(months, revenue, 0.01, 1000)
 
-#Uncomment the lines below to see the line you've settled upon!
+#y values for the line of best fit
 y = [m*x + b for x in months]
 
 plt.plot(months, revenue, "o")
